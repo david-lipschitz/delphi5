@@ -1,0 +1,4549 @@
+// Er-Designer 1.0 Database Diagram
+
+// Global Diagram Settings
+GLOBALS
+	VERSION 1100
+	AUTHOR [David Lipschitz]
+	DATABASENAME [VT Production Management]
+	METHOD 3
+	AUTOLINK TRUE
+	ENTITYDLGMANDATORY FALSE
+	RELATIONDLGMANDATORY FALSE
+	DEFAULTATTRIBUTE TRUE
+	DEFAULTINDEX TRUE
+	FOREWARDTEXT FALSE
+	REVERSETEXT FALSE
+	SHOWATTRIBUTES FALSE
+	SQUARECORNERS TRUE
+	USEFOREIGNKEYS TRUE
+	VERTICALTEXT FALSE
+	SHOWATTDETAIL FALSE
+	SHOWFKEY TRUE
+	SHOWPKEY TRUE
+	SHADOW FALSE
+END
+// Entity list
+ENTITY [Agent (1)]
+	TYPE 1
+	POSITION 150,310,80,65
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Agent]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmAg005]
+	PROPERTY [Form Name]=[DlgfrmAg005]
+	PROPERTY [Library FileName]=[libAg005]
+	PROPERTY [View FileName]=[lstAg005]
+	PROPERTY [View Name]=[DlglstAg005]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Agent]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [AgentRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[AgentRef]
+		PROPERTY [Column Name]=[AgentRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[6]
+		PROPERTY [Control Hint]=[AgentRef]
+		PROPERTY [Control Label]=[AgentRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[6]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [AgentRef]
+
+	END
+END
+ENTITY [APOrdDet]
+	TYPE 1
+	POSITION 620,260,70,65
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+	DESC 1:Accounts Payable Order Details
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[APOrdDet]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmAP008]
+	PROPERTY [Form Name]=[DlgfrmAP008]
+	PROPERTY [Library FileName]=[libAP008]
+	PROPERTY [View FileName]=[lstAP008]
+	PROPERTY [View Name]=[DlglstAP008]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[APOrdDet]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [VTOrdNo]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[5]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[VTOrdNo]
+		PROPERTY [Column Name]=[VTOrdNo]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[5]
+		PROPERTY [Control Hint]=[VTOrdNo]
+		PROPERTY [Control Label]=[VTOrdNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[5]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[5]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ExpDelDate]
+		DATATYPE 18
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[ExpDelDate]
+		PROPERTY [Column Name]=[ExpDelDate]
+		PROPERTY [Comp DataType]=[TDateTime]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ExpDelDate]
+		PROPERTY [Control Label]=[ExpDelDate]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[DATE]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ProdRef]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[ProdRef]
+		PROPERTY [Column Name]=[ProdRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[6]
+		PROPERTY [Control Hint]=[ProdRef]
+		PROPERTY [Control Label]=[ProdRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[6]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [VTOrdNo]
+		KEY [ExpDelDate]
+		KEY [ProdRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [APOrdHdr]
+	TYPE 1
+	POSITION 500,160,70,65
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+	DESC 1:Accounts Payable Order Header
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[APOrdHdr]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmAP010]
+	PROPERTY [Form Name]=[DlgfrmAP010]
+	PROPERTY [Library FileName]=[libAP010]
+	PROPERTY [View FileName]=[lstAP010]
+	PROPERTY [View Name]=[DlglstAP010]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[APOrdHdr]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [VTOrdNo]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[5]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[5]
+		PROPERTY [Control Hint]=[VTOrdNo]
+		PROPERTY [Control Label]=[VTOrdNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[5]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[5]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Initials]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Initials]
+		PROPERTY [Column Name]=[Initials]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Initials]
+		PROPERTY [Control Label]=[Initials]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [CurRef]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[3]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[CurRef]
+		PROPERTY [Column Name]=[CurRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[CurRef]
+		PROPERTY [Control Label]=[CurRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[3]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [VTOrdNo]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Currency]
+	TYPE 1
+	POSITION 400,160,70,65
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Currency]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmCu015]
+	PROPERTY [Form Name]=[DlgfrmCu015]
+	PROPERTY [Library FileName]=[libCu015]
+	PROPERTY [View FileName]=[lstCu015]
+	PROPERTY [View Name]=[DlglstCu015]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Currency]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [CurRef]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[3]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[CurRef]
+		PROPERTY [Column Name]=[CurRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[CurRef]
+		PROPERTY [Control Label]=[CurRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[3]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [CurRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [DelHead]
+	TYPE 1
+	POSITION 270,380,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[DelHead]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmDe019]
+	PROPERTY [Form Name]=[DlgfrmDe019]
+	PROPERTY [Library FileName]=[libDe019]
+	PROPERTY [View FileName]=[lstDe019]
+	PROPERTY [View Name]=[DlglstDe019]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[DelHead]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [DelNo]
+		DATATYPE 13
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [AgentRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[AgentRef]
+		PROPERTY [Column Name]=[AgentRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[6]
+		PROPERTY [Control Hint]=[AgentRef]
+		PROPERTY [Control Label]=[AgentRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[6]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [VTOrdNo]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[5]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[5]
+		PROPERTY [Control Hint]=[VTOrdNo]
+		PROPERTY [Control Label]=[VTOrdNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[5]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[5]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Initials]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Initials]
+		PROPERTY [Column Name]=[Initials]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Initials]
+		PROPERTY [Control Label]=[Initials]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [DelNo]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [DelPallet]
+	TYPE 1
+	POSITION 90,430,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[DelPallet]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmDe020]
+	PROPERTY [Form Name]=[DlgfrmDe020]
+	PROPERTY [Library FileName]=[libDe020]
+	PROPERTY [View FileName]=[lstDe020]
+	PROPERTY [View Name]=[DlglstDe020]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[DelPallet]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [DelNo]
+		DATATYPE 13
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[DelNo]
+		PROPERTY [Column Name]=[DelNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[DelNo]
+		PROPERTY [Control Label]=[DelNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [PalletNo]
+		DATATYPE 13
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[PalletNo]
+		PROPERTY [Column Name]=[PalletNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[PalletNo]
+		PROPERTY [Control Label]=[PalletNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [DelNo]
+		KEY [PalletNo]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [DelBCB]
+	TYPE 1
+	POSITION 410,470,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[DelBCB]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmDe021]
+	PROPERTY [Form Name]=[DlgfrmDe021]
+	PROPERTY [Library FileName]=[libDe021]
+	PROPERTY [View FileName]=[lstDe021]
+	PROPERTY [View Name]=[DlglstDe021]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[DelBCB]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [DelNo]
+		DATATYPE 13
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [PalletNo]
+		DATATYPE 13
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[PalletNo]
+		PROPERTY [Column Name]=[PalletNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[PalletNo]
+		PROPERTY [Control Label]=[PalletNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [BCBNo]
+		DATATYPE 13
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[BCBNo]
+		PROPERTY [Column Name]=[BCBNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[BCBNo]
+		PROPERTY [Control Label]=[BCBNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [DelNo]
+		KEY [PalletNo]
+		KEY [BCBNo]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Dept]
+	TYPE 1
+	POSITION 290,590,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Dept]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmDe042]
+	PROPERTY [Form Name]=[DlgfrmDe042]
+	PROPERTY [Library FileName]=[libDe042]
+	PROPERTY [View FileName]=[lstDe042]
+	PROPERTY [View Name]=[DlglstDe042]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Dept]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [DeptRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[DeptRef]
+		PROPERTY [Column Name]=[DeptRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[DeptRef]
+		PROPERTY [Control Label]=[DeptRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [DeptRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Initials]
+	TYPE 1
+	POSITION 560,370,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Initials]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmIn043]
+	PROPERTY [Form Name]=[DlgfrmIn043]
+	PROPERTY [Library FileName]=[libIn043]
+	PROPERTY [View FileName]=[lstIn043]
+	PROPERTY [View Name]=[DlglstIn043]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Initials]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [Initials]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Initials]
+		PROPERTY [Column Name]=[Initials]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Initials]
+		PROPERTY [Control Label]=[Initials]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [Initials]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [InvFrom]
+	TYPE 1
+	POSITION 1070,850,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[InvFrom]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmIn044]
+	PROPERTY [Form Name]=[DlgfrmIn044]
+	PROPERTY [Library FileName]=[libIn044]
+	PROPERTY [View FileName]=[lstIn044]
+	PROPERTY [View Name]=[DlglstIn044]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[InvFrom]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [InvRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[InvRef]
+		PROPERTY [Column Name]=[InvRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[InvRef]
+		PROPERTY [Control Label]=[InvRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [InvRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [NextNo]
+	TYPE 1
+	POSITION 750,120,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[NextNo]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmNe049]
+	PROPERTY [Form Name]=[DlgfrmNe049]
+	PROPERTY [Library FileName]=[libNe049]
+	PROPERTY [View FileName]=[lstNe049]
+	PROPERTY [View Name]=[DlglstNe049]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[NextNo]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [Ref]
+		DATATYPE 13
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [Ref]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [IssueDet]
+	TYPE 1
+	POSITION 100,590,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[IssueDet]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmIs052]
+	PROPERTY [Form Name]=[DlgfrmIs052]
+	PROPERTY [Library FileName]=[libIs052]
+	PROPERTY [View FileName]=[lstIs052]
+	PROPERTY [View Name]=[DlglstIs052]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[IssueDet]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [IssueNo]
+		DATATYPE 13
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[IssueNo]
+		PROPERTY [Column Name]=[IssueNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[IssueNo]
+		PROPERTY [Control Label]=[IssueNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [DelNo]
+		DATATYPE 13
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[DelNo]
+		PROPERTY [Column Name]=[DelNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[DelNo]
+		PROPERTY [Control Label]=[DelNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [PalletNo]
+		DATATYPE 13
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[PalletNo]
+		PROPERTY [Column Name]=[PalletNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[PalletNo]
+		PROPERTY [Control Label]=[PalletNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [BCBNo]
+		DATATYPE 13
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[BCBNo]
+		PROPERTY [Column Name]=[BCBNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[BCBNo]
+		PROPERTY [Control Label]=[BCBNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Initials]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Initials]
+		PROPERTY [Column Name]=[Initials]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Initials]
+		PROPERTY [Control Label]=[Initials]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [IssueTo]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[IssueTo]
+		PROPERTY [Column Name]=[IssueTo]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[IssueTo]
+		PROPERTY [Control Label]=[IssueTo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [DeptRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[DeptRef]
+		PROPERTY [Column Name]=[DeptRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[DeptRef]
+		PROPERTY [Control Label]=[DeptRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [IssueNo]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [SupCust (1)]
+	TYPE 1
+	POSITION 280,290,110,55
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[SupCust]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmSu062]
+	PROPERTY [Form Name]=[DlgfrmSu062]
+	PROPERTY [Library FileName]=[libSu062]
+	PROPERTY [View FileName]=[lstSu062]
+	PROPERTY [View Name]=[DlglstSu062]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[SupCust]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [AgentRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[AgentRef]
+		PROPERTY [Column Name]=[AgentRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[6]
+		PROPERTY [Control Hint]=[AgentRef]
+		PROPERTY [Control Label]=[AgentRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[6]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Terms]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[10]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Terms]
+		PROPERTY [Column Name]=[Terms]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Terms]
+		PROPERTY [Control Label]=[Terms]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[10]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [SupRef]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[SupRef]
+		PROPERTY [Column Name]=[SupRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[SupRef]
+		PROPERTY [Control Label]=[SupRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [SupRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Product]
+	TYPE 1
+	POSITION 30,140,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Product]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmPr077]
+	PROPERTY [Form Name]=[DlgfrmPr077]
+	PROPERTY [Library FileName]=[libPr077]
+	PROPERTY [View FileName]=[lstPr077]
+	PROPERTY [View Name]=[DlglstPr077]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Product]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Category]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[3]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Category]
+		PROPERTY [Column Name]=[Category]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Category]
+		PROPERTY [Control Label]=[Category]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[3]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [UnitRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[UnitRef]
+		PROPERTY [Column Name]=[UnitRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[UnitRef]
+		PROPERTY [Control Label]=[UnitRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Param]
+	TYPE 1
+	POSITION 750,220,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Param]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmPa176]
+	PROPERTY [Form Name]=[DlgfrmPa176]
+	PROPERTY [Library FileName]=[libPa176]
+	PROPERTY [View FileName]=[lstPa176]
+	PROPERTY [View Name]=[DlglstPa176]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Param]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [ProdCat]
+	TYPE 1
+	POSITION 310,40,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[ProdCat]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmPr210]
+	PROPERTY [Form Name]=[DlgfrmPr210]
+	PROPERTY [Library FileName]=[libPr210]
+	PROPERTY [View FileName]=[lstPr210]
+	PROPERTY [View Name]=[DlglstPr210]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[ProdCat]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [Category]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[3]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Category]
+		PROPERTY [Column Name]=[Category]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Category]
+		PROPERTY [Control Label]=[Category]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[3]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [Category]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [ProdSup]
+	TYPE 1
+	POSITION 280,160,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+	DESC 1:Link particular suppliers to particular products so that when selecting products to receive only the suppliers who supply those products are displayed
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[ProdSup]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmPr246]
+	PROPERTY [Form Name]=[DlgfrmPr246]
+	PROPERTY [Library FileName]=[libPr246]
+	PROPERTY [View FileName]=[lstPr246]
+	PROPERTY [View Name]=[DlglstPr246]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[ProdSup]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ProdRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[ProdRef]
+		PROPERTY [Column Name]=[ProdRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ProdRef]
+		PROPERTY [Control Label]=[ProdRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [SupRef]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[SupRef]
+		PROPERTY [Column Name]=[SupRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[SupRef]
+		PROPERTY [Control Label]=[SupRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ProdRef]
+		KEY [SupRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Terms]
+	TYPE 1
+	POSITION 150,220,80,60
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Terms]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmTe268]
+	PROPERTY [Form Name]=[DlgfrmTe268]
+	PROPERTY [Library FileName]=[libTe268]
+	PROPERTY [View FileName]=[lstTe268]
+	PROPERTY [View Name]=[DlglstTe268]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Terms]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [Terms]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[10]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Terms]
+		PROPERTY [Column Name]=[Terms]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Terms]
+		PROPERTY [Control Label]=[Terms]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[10]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [Terms]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Unit]
+	TYPE 1
+	POSITION 20,20,70,50
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Unit]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmUn269]
+	PROPERTY [Form Name]=[DlgfrmUn269]
+	PROPERTY [Library FileName]=[libUn269]
+	PROPERTY [View FileName]=[lstUn269]
+	PROPERTY [View Name]=[DlglstUn269]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Unit]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [UnitRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[UnitRef]
+		PROPERTY [Column Name]=[UnitRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[UnitRef]
+		PROPERTY [Control Label]=[UnitRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [UnitRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [WIPRcpt]
+	TYPE 1
+	POSITION 580,630,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[WIPRcpt]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmWI324]
+	PROPERTY [Form Name]=[DlgfrmWI324]
+	PROPERTY [Library FileName]=[libWI324]
+	PROPERTY [View FileName]=[lstWI324]
+	PROPERTY [View Name]=[DlglstWI324]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[WIPRcpt]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ProdRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[ProdRef]
+		PROPERTY [Column Name]=[ProdRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ProdRef]
+		PROPERTY [Control Label]=[ProdRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [RefNo]
+		DATATYPE 13
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[RefNo]
+		PROPERTY [Column Name]=[RefNo]
+		PROPERTY [Comp DataType]=[Integer]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[RefNo]
+		PROPERTY [Control Label]=[RefNo]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[SMALLINT]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Initials]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Initials]
+		PROPERTY [Column Name]=[Initials]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Initials]
+		PROPERTY [Control Label]=[Initials]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [DeptRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[DeptRef]
+		PROPERTY [Column Name]=[DeptRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[DeptRef]
+		PROPERTY [Control Label]=[DeptRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [RefNo]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YarnCol]
+	TYPE 1
+	POSITION 90,960,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YarnCol]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYa439]
+	PROPERTY [Form Name]=[DlgfrmYa439]
+	PROPERTY [Library FileName]=[libYa439]
+	PROPERTY [View FileName]=[lstYa439]
+	PROPERTY [View Name]=[DlglstYa439]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YarnCol]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [YnCol]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[3]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnCol]
+		PROPERTY [Column Name]=[YnCol]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnCol]
+		PROPERTY [Control Label]=[YnCol]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[3]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [YnCol]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YarnKind]
+	TYPE 1
+	POSITION 530,740,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YarnKind]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYa440]
+	PROPERTY [Form Name]=[DlgfrmYa440]
+	PROPERTY [Library FileName]=[libYa440]
+	PROPERTY [View FileName]=[lstYa440]
+	PROPERTY [View Name]=[DlglstYa440]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YarnKind]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [Ref]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[1]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Ref]
+		PROPERTY [Column Name]=[Ref]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Ref]
+		PROPERTY [Control Label]=[Ref]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[1]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [Ref]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YarnStru]
+	TYPE 1
+	POSITION 280,740,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YarnStru]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYa441]
+	PROPERTY [Form Name]=[DlgfrmYa441]
+	PROPERTY [Library FileName]=[libYa441]
+	PROPERTY [View FileName]=[lstYa441]
+	PROPERTY [View Name]=[DlglstYa441]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YarnStru]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [YnStru]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnStru]
+		PROPERTY [Column Name]=[YnStru]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnStru]
+		PROPERTY [Control Label]=[YnStru]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnTwist]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[2]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnTwist]
+		PROPERTY [Column Name]=[YnTwist]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnTwist]
+		PROPERTY [Control Label]=[YnTwist]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[2]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Ref]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[1]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Ref]
+		PROPERTY [Column Name]=[Ref]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Ref]
+		PROPERTY [Control Label]=[Ref]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[1]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [TwistRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[2]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[TwistRef]
+		PROPERTY [Column Name]=[TwistRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[TwistRef]
+		PROPERTY [Control Label]=[TwistRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[2]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [YnStru]
+		KEY [YnTwist]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YnTwist]
+	TYPE 1
+	POSITION 130,720,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YnTwist]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYn446]
+	PROPERTY [Form Name]=[DlgfrmYn446]
+	PROPERTY [Library FileName]=[libYn446]
+	PROPERTY [View FileName]=[lstYn446]
+	PROPERTY [View Name]=[DlglstYn446]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YnTwist]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [TwistRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[2]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[TwistRef]
+		PROPERTY [Column Name]=[TwistRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[TwistRef]
+		PROPERTY [Control Label]=[TwistRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[2]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [TwistRef]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YarnType]
+	TYPE 1
+	POSITION 280,960,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YarnType]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYa448]
+	PROPERTY [Form Name]=[DlgfrmYa448]
+	PROPERTY [Library FileName]=[libYa448]
+	PROPERTY [View FileName]=[lstYa448]
+	PROPERTY [View Name]=[DlglstYa448]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YarnType]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [YnStru]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnStru]
+		PROPERTY [Column Name]=[YnStru]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnStru]
+		PROPERTY [Control Label]=[YnStru]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnTwist]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[2]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnTwist]
+		PROPERTY [Column Name]=[YnTwist]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnTwist]
+		PROPERTY [Control Label]=[YnTwist]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[2]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnCol]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[3]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnCol]
+		PROPERTY [Column Name]=[YnCol]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnCol]
+		PROPERTY [Control Label]=[YnCol]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[3]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [YnStru]
+		KEY [YnTwist]
+		KEY [YnCol]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [DeptGroup (VB,Fuse)]
+	TYPE 1
+	POSITION 530,990,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[DeptGroup_(VB,Fuse)]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmDe462]
+	PROPERTY [Form Name]=[DlgfrmDe462]
+	PROPERTY [Library FileName]=[libDe462]
+	PROPERTY [View FileName]=[lstDe462]
+	PROPERTY [View Name]=[DlglstDe462]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[DeptGroup_(VB,Fuse)]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YnEffGroup (A=basic,B=fancy,C=Fuse) for efficiency report]
+	TYPE 1
+	POSITION 540,900,190,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YnEffGroup_(A=basic,B=fancy,C=Fuse)]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYn472]
+	PROPERTY [Form Name]=[DlgfrmYn472]
+	PROPERTY [Library FileName]=[libYn472]
+	PROPERTY [View FileName]=[lstYn472]
+	PROPERTY [View Name]=[DlglstYn472]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YnEffGroup_(A=basic,B=fancy,C=Fuse)]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YnStruWBSRM]
+	TYPE 1
+	POSITION 10,820,130,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+	DESC 1:Overall YarnStru Work Breakdown Structure
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YnStruWBSRM]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYn473]
+	PROPERTY [Form Name]=[DlgfrmYn473]
+	PROPERTY [Library FileName]=[libYn473]
+	PROPERTY [View FileName]=[lstYn473]
+	PROPERTY [View Name]=[DlglstYn473]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YnStruWBSRM]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [TwistRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[2]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[TwistRef]
+		PROPERTY [Column Name]=[TwistRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[TwistRef]
+		PROPERTY [Control Label]=[TwistRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[2]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnStru]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnStru]
+		PROPERTY [Column Name]=[YnStru]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnStru]
+		PROPERTY [Control Label]=[YnStru]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnTwist]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[2]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnTwist]
+		PROPERTY [Column Name]=[YnTwist]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnTwist]
+		PROPERTY [Control Label]=[YnTwist]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[2]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YarnRcpt]
+	TYPE 1
+	POSITION 810,820,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YarnRcpt]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYa543]
+	PROPERTY [Form Name]=[DlgfrmYa543]
+	PROPERTY [Library FileName]=[libYa543]
+	PROPERTY [View FileName]=[lstYa543]
+	PROPERTY [View Name]=[DlglstYa543]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YarnRcpt]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [BoxNo]
+		DATATYPE 13
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnStru]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnStru]
+		PROPERTY [Column Name]=[YnStru]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnStru]
+		PROPERTY [Control Label]=[YnStru]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnTwist]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[2]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnTwist]
+		PROPERTY [Column Name]=[YnTwist]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnTwist]
+		PROPERTY [Control Label]=[YnTwist]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[2]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [YnCol]
+		DATATYPE 11
+
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[3]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[YnCol]
+		PROPERTY [Column Name]=[YnCol]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[YnCol]
+		PROPERTY [Control Label]=[YnCol]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[3]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Initials]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Initials]
+		PROPERTY [Column Name]=[Initials]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Initials]
+		PROPERTY [Control Label]=[Initials]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [BoxNo]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YarnPallet]
+	TYPE 1
+	POSITION 820,960,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[YarnPallet]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmYa554]
+	PROPERTY [Form Name]=[DlgfrmYa554]
+	PROPERTY [Library FileName]=[libYa554]
+	PROPERTY [View FileName]=[lstYa554]
+	PROPERTY [View Name]=[DlglstYa554]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[YarnPallet]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [YnDespHdr]
+	TYPE 1
+	POSITION 990,970,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Despatch]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmDe558]
+	PROPERTY [Form Name]=[DlgfrmDe558]
+	PROPERTY [Library FileName]=[libDe558]
+	PROPERTY [View FileName]=[lstDe558]
+	PROPERTY [View Name]=[DlglstDe558]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Despatch]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [Initials]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[4]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[Initials]
+		PROPERTY [Column Name]=[Initials]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[Initials]
+		PROPERTY [Control Label]=[Initials]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[4]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	ATTRIBUTE [InvRef]
+		DATATYPE 11
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Size]=[6]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[]
+		PROPERTY [Code]=[InvRef]
+		PROPERTY [Column Name]=[InvRef]
+		PROPERTY [Comp DataType]=[string]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[InvRef]
+		PROPERTY [Control Label]=[InvRef]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[6]
+		PROPERTY [DB DataType]=[VARCHAR]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [SupCust (2)]
+	TYPE 1
+	POSITION 740,1090,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[SupCust_(2)]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmSu609]
+	PROPERTY [Form Name]=[DlgfrmSu609]
+	PROPERTY [Library FileName]=[libSu609]
+	PROPERTY [View FileName]=[lstSu609]
+	PROPERTY [View Name]=[DlglstSu609]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[SupCust_(2)]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+ENTITY [Agent (2)]
+	TYPE 1
+	POSITION 1060,1090,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[Agent_(2)]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmAg638]
+	PROPERTY [Form Name]=[DlgfrmAg638]
+	PROPERTY [Library FileName]=[libAg638]
+	PROPERTY [View FileName]=[lstAg638]
+	PROPERTY [View Name]=[DlglstAg638]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[Agent_(2)]
+	PROPERTY [Tag]=[]
+	ATTRIBUTE [ID]
+		DATATYPE 14
+		DESC 1:Default ID Counter created by Er-Designer.
+		PROPERTY [Mandatory]=[True]
+		PROPERTY [Mark]=[False]
+		PROPERTY [Tag]=[]
+		PROPERTY [Value]=[0]
+		PROPERTY [Code]=[ID]
+		PROPERTY [Column Name]=[ID]
+		PROPERTY [Comp DataType]=[Cardinal]
+		PROPERTY [Comp Precision]=[0]
+		PROPERTY [Comp Width]=[1]
+		PROPERTY [Control Hint]=[ID]
+		PROPERTY [Control Label]=[ID]
+		PROPERTY [Control Type]=[EditBox]
+		PROPERTY [Control Width]=[]
+		PROPERTY [DB DataType]=[INTEGER]
+		PROPERTY [DB Width]=[1]
+		PROPERTY [DB Precision]=[0]
+		PROPERTY [UseInForm]=[True]
+		PROPERTY [UseInList]=[True]
+	END
+	INDEX [ID]
+		PRIMARY TRUE
+		UNIQUE TRUE
+		KEY [ID]
+		DESC 1:Default, Primary Index created by Er-Designer.
+	END
+END
+// Relation list
+RELATION [ToDo]
+	FROM [APOrdHdr],MANDATORY,MANY
+	TO [APOrdDet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[ToDo]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (570,210) (640,210) (640,260)
+	 RELKEY [VTOrdNo]=[VTOrdNo]
+RELATIONENTITY [ToDo]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[ToDo]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[frmTo003]
+	PROPERTY [Form Name]=[DlgfrmTo003]
+	PROPERTY [Library FileName]=[libTo003]
+	PROPERTY [View FileName]=[lstTo003]
+	PROPERTY [View Name]=[DlglstTo003]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[ToDo]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo1]
+	FROM [DelHead],MANDATORY,MANY
+	TO [DelPallet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (270,440) (230,440) (230,470) (190,470)
+	 RELKEY [DelNo]=[DelNo]
+RELATIONENTITY [ToDo1]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo2]
+	FROM [DelHead],MANDATORY,MANY
+	TO [DelBCB],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (350,455) (350,490) (410,490)
+	 RELKEY [DelNo]=[DelNo]
+RELATIONENTITY [ToDo2]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo3]
+	FROM [Initials],MANDATORY,MANY
+	TO [APOrdHdr],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (590,370) (590,297) (560,297) (560,225)
+	 RELKEY [Initials]=[Initials]
+RELATIONENTITY [ToDo3]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo4]
+	FROM [Currency],MANDATORY,MANY
+	TO [APOrdHdr],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (470,190) (500,190)
+	 RELKEY [CurRef]=[CurRef]
+RELATIONENTITY [ToDo4]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo5]
+	FROM [SupCust (1)],MANDATORY,MANY
+	TO [DelHead],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (320,345) (320,380)
+RELATIONENTITY [ToDo5]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo6]
+	FROM [Agent (1)],MANDATORY,MANY
+	TO [DelHead],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (205,375) (205,390) (240,390) (240,390) (270,390)
+	 RELKEY [AgentRef]=[AgentRef]
+RELATIONENTITY [ToDo6]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo7]
+	FROM [APOrdHdr],MANDATORY,MANY
+	TO [DelHead],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (540,225) (540,400) (370,400)
+	 RELKEY [VTOrdNo]=[VTOrdNo]
+RELATIONENTITY [ToDo7]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo8]
+	FROM [Initials],MANDATORY,MANY
+	TO [DelHead],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (560,420) (370,420)
+	 RELKEY [Initials]=[Initials]
+RELATIONENTITY [ToDo8]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo9]
+	FROM [Product],MANDATORY,MANY
+	TO [APOrdDet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (130,150) (680,150) (680,260)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo9]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo10]
+	FROM [Product],MANDATORY,MANY
+	TO [DelHead],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (120,215) (120,410) (270,410)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo10]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo11]
+	FROM [Product],MANDATORY,MANY
+	TO [DelPallet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (100,215) (100,430)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo11]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo12]
+	FROM [Dept],MANDATORY,MANY
+	TO [IssueDet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (290,630) (200,630)
+	 RELKEY [DeptRef]=[DeptRef]
+RELATIONENTITY [ToDo12]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo13]
+	FROM [SupCust (1)],MANDATORY,MANY
+	TO [APOrdHdr],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (390,310) (510,310) (510,225)
+RELATIONENTITY [ToDo13]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo14]
+	FROM [DelPallet],MANDATORY,MANY
+	TO [IssueDet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (140,505) (140,590)
+	 RELKEY [DelNo]=[DelNo]
+	 RELKEY [PalletNo]=[PalletNo]
+RELATIONENTITY [ToDo14]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo15]
+	FROM [DelBCB],MANDATORY,MANY
+	TO [IssueDet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (410,530) (180,530) (180,590)
+	 RELKEY [DelNo]=[DelNo]
+	 RELKEY [PalletNo]=[PalletNo]
+	 RELKEY [BCBNo]=[BCBNo]
+RELATIONENTITY [ToDo15]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo16]
+	FROM [ProdCat],MANDATORY,MANY
+	TO [Product],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (310,80) (100,80) (100,140)
+	 RELKEY [Category]=[Category]
+RELATIONENTITY [ToDo16]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo17]
+	FROM [Product],MANDATORY,MANY
+	TO [ProdSup],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (130,180) (280,180)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo17]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo18]
+	FROM [SupCust (1)],MANDATORY,MANY
+	TO [ProdSup],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (300,290) (300,262) (290,262) (290,235)
+RELATIONENTITY [ToDo18]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo19]
+	FROM [Agent (1)],MANDATORY,MANY
+	TO [SupCust (1)],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (230,330) (280,330)
+	 RELKEY [AgentRef]=[AgentRef]
+RELATIONENTITY [ToDo19]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo20]
+	FROM [Terms],MANDATORY,MANY
+	TO [SupCust (1)],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (230,240) (255,240) (255,310) (280,310)
+	 RELKEY [Terms]=[Terms]
+RELATIONENTITY [ToDo20]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo21]
+	FROM [Unit],MANDATORY,MANY
+	TO [Product],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (50,70) (50,140)
+	 RELKEY [UnitRef]=[UnitRef]
+RELATIONENTITY [ToDo21]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo22]
+	FROM [Product],MANDATORY,MANY
+	TO [WIPRcpt],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (60,215) (60,690) (580,690)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo22]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo23]
+	FROM [Initials],MANDATORY,MANY
+	TO [WIPRcpt],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (600,445) (600,630)
+	 RELKEY [Initials]=[Initials]
+RELATIONENTITY [ToDo23]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo24]
+	FROM [Dept],MANDATORY,MANY
+	TO [WIPRcpt],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (390,650) (580,650)
+	 RELKEY [DeptRef]=[DeptRef]
+RELATIONENTITY [ToDo24]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo25]
+	FROM [YarnKind],MANDATORY,MANY
+	TO [YarnStru],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (530,790) (380,790)
+	 RELKEY [Ref]=[Ref]
+RELATIONENTITY [ToDo25]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo26]
+	FROM [YnTwist],MANDATORY,MANY
+	TO [YarnStru],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (230,760) (280,760)
+	 RELKEY [TwistRef]=[TwistRef]
+RELATIONENTITY [ToDo26]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo27]
+	FROM [YarnStru],MANDATORY,MANY
+	TO [YarnType],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (330,815) (330,960)
+	 RELKEY [YnStru]=[YnStru]
+	 RELKEY [YnTwist]=[YnTwist]
+RELATIONENTITY [ToDo27]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo28]
+	FROM [YarnCol],MANDATORY,MANY
+	TO [YarnType],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (190,1000) (280,1000)
+	 RELKEY [YnCol]=[YnCol]
+RELATIONENTITY [ToDo28]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo30]
+	FROM [DeptGroup (VB,Fuse)],MANDATORY,MANY
+	TO [YarnType],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (530,1010) (380,1010)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo30]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo29]
+	FROM [YnEffGroup (A=basic,B=fancy,C=Fuse) for efficiency report],MANDATORY,MANY
+	TO [YarnType],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (540,930) (370,930) (370,960)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo29]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo31]
+	FROM [YnTwist],MANDATORY,MANY
+	TO [YnStruWBSRM],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (180,795) (180,840) (140,840)
+	 RELKEY [TwistRef]=[TwistRef]
+RELATIONENTITY [ToDo31]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo32]
+	FROM [YarnStru],MANDATORY,MANY
+	TO [YnStruWBSRM],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (300,815) (300,880) (140,880)
+	 RELKEY [YnStru]=[YnStru]
+	 RELKEY [YnTwist]=[YnTwist]
+RELATIONENTITY [ToDo32]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo33]
+	FROM [YnStruWBSRM],MANDATORY,MANY
+	TO [Product],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (40,820) (40,215)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo33]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo34]
+	FROM [Initials],MANDATORY,MANY
+	TO [YarnRcpt],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (660,410) (870,410) (870,820)
+	 RELKEY [Initials]=[Initials]
+RELATIONENTITY [ToDo34]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo35]
+	FROM [YarnType],MANDATORY,MANY
+	TO [YarnRcpt],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (350,960) (350,870) (810,870)
+	 RELKEY [YnStru]=[YnStru]
+	 RELKEY [YnTwist]=[YnTwist]
+	 RELKEY [YnCol]=[YnCol]
+RELATIONENTITY [ToDo35]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo36]
+	FROM [YarnPallet],MANDATORY,MANY
+	TO [YarnRcpt],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (850,960) (850,895)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo36]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo37]
+	FROM [YnDespHdr],MANDATORY,MANY
+	TO [YarnPallet],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (990,1000) (920,1000)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo37]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo38]
+	FROM [Initials],MANDATORY,MANY
+	TO [YnDespHdr],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (660,390) (1040,390) (1040,970)
+	 RELKEY [Initials]=[Initials]
+RELATIONENTITY [ToDo38]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo39]
+	FROM [InvFrom],MANDATORY,MANY
+	TO [YnDespHdr],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (1140,925) (1140,990) (1090,990)
+	 RELKEY [InvRef]=[InvRef]
+RELATIONENTITY [ToDo39]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo40]
+	FROM [SupCust (2)],MANDATORY,MANY
+	TO [YnDespHdr],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (840,1140) (1010,1140) (1010,1045)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo40]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+RELATION [ToDo41]
+	FROM [Agent (2)],MANDATORY,MANY
+	TO [YnDespHdr],OPTIONAL,MANY
+	TYPE 5
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,5,0
+	FOREWARDTEXT [has]
+	REVERSETEXT [is part of]
+
+	PROPERTY [Code]=[]
+	PROPERTY [Delete]=[False]
+	PROPERTY [Insert]=[True]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Select]=[True]
+	PROPERTY [Tag]=[]
+	PROPERTY [Update]=[True]
+	LINE (1080,1090) (1080,1045)
+	 RELKEY [ID]=[ID]
+RELATIONENTITY [ToDo41]
+	TYPE 1
+	POSITION 0,0,100,75
+	BACKGROUND 16777215
+	LINECOLOR 0
+	FONT [Arial],0,-13,1,0,0,0,0,0
+
+	PROPERTY [Average]=[10]
+	PROPERTY [Code]=[]
+	PROPERTY [Create Form]=[True]
+	PROPERTY [Create Library]=[True]
+	PROPERTY [Create View]=[True]
+	PROPERTY [Form FileName]=[]
+	PROPERTY [Form Name]=[]
+	PROPERTY [Library FileName]=[]
+	PROPERTY [View FileName]=[]
+	PROPERTY [View Name]=[]
+	PROPERTY [Mark]=[False]
+	PROPERTY [Max]=[100]
+	PROPERTY [Min]=[1]
+	PROPERTY [Table Name]=[]
+	PROPERTY [Tag]=[]
+END
+END
+// Text comments
+// Proceduress
+// End of diagram!

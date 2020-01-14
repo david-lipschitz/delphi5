@@ -1,0 +1,56 @@
+select distinct vr.boxno,vr.lotno,vr.datemanu,vr.qlty,
+  vw.metriclabeldescr,vw.imperialwidth,
+  vt.labeldescr
+from vbrcpt vr,vbwidth vw,vbtype vt
+where vr.vbstru=vt.vbstru
+and vr.vbcol=vt.vbcol
+and vr.metricwidth=vw.metricwidth
+order by boxno
+
+      BOXNO       LOTNO    DATEMANU QLTY   METRICLABELDESCR IMPERIALWIDTH LABELDESCR 
+=========== =========== =========== ====== ================ ============= ========== 
+
+          1      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          2      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          3      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          4      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          5      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          6      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          7      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          8      100001 11-MAR-1996        89mm             3.5"          VTH100     
+          9      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         10      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         11      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         12      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         13      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         14      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         15      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         16      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         17      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         18      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         19      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         20      100001 11-MAR-1996        89mm             3.5"          VTH100     
+
+      BOXNO       LOTNO    DATEMANU QLTY   METRICLABELDESCR IMPERIALWIDTH LABELDESCR 
+=========== =========== =========== ====== ================ ============= ========== 
+         21      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         22      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         23      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         24      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         25      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         26      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         27      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         28      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         29      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         30      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         31      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         32      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         33      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         34      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         35      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         36      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         37      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         38      100001 11-MAR-1996        89mm             3.5"          VTH100     
+         39      100001 11-MAR-1996        89mm             3.5"          VTH100     
+
+

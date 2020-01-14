@@ -1,0 +1,314 @@
+unit WagesReport;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Db, Qrctrls, quickrpt, ExtCtrls, DBTables;
+
+type
+  TfrmPayReport = class(TForm)
+    qryReport: TQuery;
+    tabCompany: TTable;
+    qrpReport: TQuickRep;
+    ColumnHeaderBand1: TQRBand;
+    DetailBand1: TQRBand;
+    QRDBText1: TQRDBText;
+    QRLabel1: TQRLabel;
+    QRDBText2: TQRDBText;
+    QRDBText48: TQRDBText;
+    QRDBText54: TQRDBText;
+    QRDBText55: TQRDBText;
+    QRDBText56: TQRDBText;
+    QRDBText57: TQRDBText;
+    QRDBText58: TQRDBText;
+    QRLabel14: TQRLabel;
+    QRLabel82: TQRLabel;
+    QRLabel83: TQRLabel;
+    QRLabel84: TQRLabel;
+    QRDBText93: TQRDBText;
+    QRDBText101: TQRDBText;
+    QRDBText109: TQRDBText;
+    QRDBText117: TQRDBText;
+    QRLabel2: TQRLabel;
+    QRLabel3: TQRLabel;
+    QRLabel5: TQRLabel;
+    QRLabel6: TQRLabel;
+    QRLabel7: TQRLabel;
+    QRLabel8: TQRLabel;
+    QRLabel9: TQRLabel;
+    QRLabel10: TQRLabel;
+    QRLabel11: TQRLabel;
+    QRDBText9: TQRDBText;
+    QRDBText8: TQRDBText;
+    QRDBText7: TQRDBText;
+    QRDBText6: TQRDBText;
+    QRDBText5: TQRDBText;
+    QRDBText4: TQRDBText;
+    QRLabel4: TQRLabel;
+    QRLabel12: TQRLabel;
+    QRLabel13: TQRLabel;
+    QRLabel81: TQRLabel;
+    QRDBText10: TQRDBText;
+    QRLabel15: TQRLabel;
+    QRDBText11: TQRDBText;
+    QRLabel16: TQRLabel;
+    QRDBText12: TQRDBText;
+    QRLabel17: TQRLabel;
+    QRDBText13: TQRDBText;
+    QRLabel18: TQRLabel;
+    QRDBText14: TQRDBText;
+    QRLabel19: TQRLabel;
+    QRDBText15: TQRDBText;
+    QRLabel80: TQRLabel;
+    QRLabel20: TQRLabel;
+    QRLabel22: TQRLabel;
+    QRLabel79: TQRLabel;
+    QRLabel44: TQRLabel;
+    QRLabel29: TQRLabel;
+    QRLabel30: TQRLabel;
+    QRLabel31: TQRLabel;
+    QRLabel32: TQRLabel;
+    QRLabel33: TQRLabel;
+    QRLabel34: TQRLabel;
+    QRLabel35: TQRLabel;
+    QRDBText31: TQRDBText;
+    QRDBText30: TQRDBText;
+    QRDBText29: TQRDBText;
+    QRDBText28: TQRDBText;
+    QRDBText27: TQRDBText;
+    QRDBText26: TQRDBText;
+    QRLabel36: TQRLabel;
+    QRLabel37: TQRLabel;
+    QRDBText32: TQRDBText;
+    QRLabel21: TQRLabel;
+    QRDBText39: TQRDBText;
+    QRLabel38: TQRLabel;
+    QRDBText33: TQRDBText;
+    QRLabel45: TQRLabel;
+    QRDBText40: TQRDBText;
+    QRLabel39: TQRLabel;
+    QRDBText34: TQRDBText;
+    QRLabel46: TQRLabel;
+    QRDBText41: TQRDBText;
+    QRDBText42: TQRDBText;
+    QRLabel47: TQRLabel;
+    QRDBText35: TQRDBText;
+    QRLabel40: TQRLabel;
+    QRLabel41: TQRLabel;
+    QRDBText36: TQRDBText;
+    QRLabel48: TQRLabel;
+    QRDBText43: TQRDBText;
+    QRDBText44: TQRDBText;
+    QRLabel49: TQRLabel;
+    QRDBText37: TQRDBText;
+    QRLabel42: TQRLabel;
+    QRDBText38: TQRDBText;
+    QRLabel43: TQRLabel;
+    QRDBText45: TQRDBText;
+    QRDBText46: TQRDBText;
+    QRDBText47: TQRDBText;
+    QRLabel52: TQRLabel;
+    QRLabel51: TQRLabel;
+    QRLabel50: TQRLabel;
+    QRLabel53: TQRLabel;
+    QRLabel54: TQRLabel;
+    QRLabel55: TQRLabel;
+    QRLabel56: TQRLabel;
+    QRLabel57: TQRLabel;
+    QRLabel58: TQRLabel;
+    QRLabel59: TQRLabel;
+    QRLabel60: TQRLabel;
+    QRDBText49: TQRDBText;
+    SummaryBand1: TQRBand;
+    QRDBText50: TQRDBText;
+    QRLabel23: TQRLabel;
+    QRDBText51: TQRDBText;
+    QRDBText53: TQRDBText;
+    QRDBText60: TQRDBText;
+    QRDBText61: TQRDBText;
+    QRDBText62: TQRDBText;
+    QRDBText63: TQRDBText;
+    QRDBText64: TQRDBText;
+    QRDBText65: TQRDBText;
+    QRDBText66: TQRDBText;
+    QRLabel62: TQRLabel;
+    QRLabel63: TQRLabel;
+    QRLabel64: TQRLabel;
+    QRLabel65: TQRLabel;
+    qryReportTHISWEEK: TDateTimeField;
+    qryReportWEEKLYORFINAL: TStringField;
+    qryReportCOINR50: TFloatField;
+    qryReportCOINR20: TFloatField;
+    qryReportCOINR10: TFloatField;
+    qryReportCOINR5: TFloatField;
+    qryReportCOINR2: TFloatField;
+    qryReportCOINR1: TFloatField;
+    qryReportCOINC50: TFloatField;
+    qryReportCOINC20: TFloatField;
+    qryReportCOINC10: TFloatField;
+    qryReportCOINC5: TFloatField;
+    qryReportCOINC2: TFloatField;
+    qryReportCOINC1: TFloatField;
+    qryReportSICKEMP1: TIntegerField;
+    qryReportSICKEMP2: TIntegerField;
+    qryReportSICKEMP3: TIntegerField;
+    qryReportSICKEMP4: TIntegerField;
+    qryReportSICKEMP5: TIntegerField;
+    qryReportSICKCONTRIB1: TFloatField;
+    qryReportSICKCONTRIB2: TFloatField;
+    qryReportSICKCONTRIB3: TFloatField;
+    qryReportSICKCONTRIB4: TFloatField;
+    qryReportSICKCONTRIB5: TFloatField;
+    qryReportTAXEARN: TFloatField;
+    qryReportSAVINGS: TFloatField;
+    qryReportLOAN: TFloatField;
+    qryReportNEGPAYLOAN: TFloatField;
+    qryReportSICKPAY: TFloatField;
+    qryReportRENTPAID: TFloatField;
+    qryReportPENSIONDEDUCT: TFloatField;
+    qryReportTAXDEDUCT: TFloatField;
+    qryReportUIFDEDUCT: TFloatField;
+    qryReportPROVFUNDDEDUCT: TFloatField;
+    qryReportCOUNCILDEDUCT: TFloatField;
+    qryReportSICKFUNDDEDUCT: TFloatField;
+    qryReportMEDAIDDEDUCT: TFloatField;
+    qryReportINSURANCEDEDUCT: TFloatField;
+    qryReportOTHER1DEDUCT: TFloatField;
+    qryReportOTHER2DEDUCT: TFloatField;
+    qryReportRENTDEDUCT: TFloatField;
+    qryReportSAVINGSDEDUCT: TFloatField;
+    qryReportLOANDEDUCT: TFloatField;
+    qryReportTOTALPAYMENTS: TFloatField;
+    qryReportTOTALDEDUCTS: TFloatField;
+    qryReportNETPAY: TFloatField;
+    qryReportEMPLOYEESTOTAL: TIntegerField;
+    qryReportNORMALHHTOTAL: TIntegerField;
+    qryReportNORMALMMTOTAL: TIntegerField;
+    qryReportOT13HHTOTAL: TIntegerField;
+    qryReportOT13MMTOTAL: TIntegerField;
+    qryReportOT12HHTOTAL: TIntegerField;
+    qryReportOT12MMTOTAL: TIntegerField;
+    qryReportOTX2HHTOTAL: TIntegerField;
+    qryReportOTX2MMTOTAL: TIntegerField;
+    qryReportPRODBONUSTOTAL: TFloatField;
+    qryReportEMPPERDEPT: TIntegerField;
+    qryReportTAXEARNINGS: TFloatField;
+    qryReportNORMALHH: TIntegerField;
+    qryReportNORMALMM: TIntegerField;
+    qryReportOT13HH: TIntegerField;
+    qryReportOT13MM: TIntegerField;
+    qryReportOT12HH: TIntegerField;
+    qryReportOT12MM: TIntegerField;
+    qryReportOTX2HH: TIntegerField;
+    qryReportOTX2MM: TIntegerField;
+    qryReportPRODBONUS: TFloatField;
+    QRShape1: TQRShape;
+    tabCompanyCONAME: TStringField;
+    tabCompanySICKFUNDPERCENT: TFloatField;
+    QRDBText16: TQRDBText;
+    QRDBText17: TQRDBText;
+    QRDBText18: TQRDBText;
+    qryReportPAYKIND: TStringField;
+    QRLabel24: TQRLabel;
+    QRDBText19: TQRDBText;
+    qryReportTOTALEARNINGS: TFloatField;
+    qryReportSAVINGSPAID: TFloatField;
+    qryReportLOANGIVEN: TFloatField;
+    qryReportCOINR100: TFloatField;
+    QRDBText3: TQRDBText;
+    qryReportCOINAGETOTAL: TFloatField;
+    QRDBText20: TQRDBText;
+    qryReportHOLIDAYPAYDAYS: TIntegerField;
+    qryReportHOLIDAYPAY: TFloatField;
+    qryReportCHRISTMASBONUS: TFloatField;
+    qryReportSERVICEBONUS: TFloatField;
+    qryReportSPECIALBONUS: TFloatField;
+    lblHolidayDays: TQRLabel;
+    lblHolidayPay: TQRLabel;
+    lblChristmasBonus: TQRLabel;
+    lblServiceBonus: TQRLabel;
+    lblSpecialBonus: TQRLabel;
+    qrdHolidayDays: TQRDBText;
+    qrdHolidayPay: TQRDBText;
+    qrdChristmasBonus: TQRDBText;
+    qrdServiceBonus: TQRDBText;
+    qrdSpecialBonus: TQRDBText;
+    qryReportABLOANDEDUCT: TFloatField;
+    QRLabel27: TQRLabel;
+    QRDBText21: TQRDBText;
+    qryReportPFLOANDEDUCT: TFloatField;
+    qryReportLAWYERDEDUCT: TFloatField;
+    QRLabel28: TQRLabel;
+    QRLabel66: TQRLabel;
+    QRDBText22: TQRDBText;
+    QRDBText23: TQRDBText;
+    lblAnnualBonus: TQRLabel;
+    qrdAnnualBonus: TQRDBText;
+    qryReportANNUALBONUS: TFloatField;
+    qryReportDESCRIPTION: TStringField;
+    QRLabel61: TQRLabel;
+    QRDBText24: TQRDBText;
+    qryReportSTANDBYALLOWANCEPAY: TFloatField;
+    qryReportBANKFEESPAY: TFloatField;
+    qryReportOVERALLSDEDUCT: TFloatField;
+    qryReportTOOLSDEDUCT: TFloatField;
+    qryReportOTHER3DEDUCT: TFloatField;
+    QRLabel67: TQRLabel;
+    QRLabel68: TQRLabel;
+    QRLabel69: TQRLabel;
+    QRDBText25: TQRDBText;
+    QRDBText59: TQRDBText;
+    QRDBText67: TQRDBText;
+    QRLabel70: TQRLabel;
+    QRLabel71: TQRLabel;
+    QRDBText68: TQRDBText;
+    QRDBText69: TQRDBText;
+    QRLabel72: TQRLabel;
+    qryReportDEPREF: TStringField;
+    qryReportDEPREF_1: TStringField;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure qrpReportBeforePrint(Sender: TQuickRep;
+      var PrintReport: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPayReport: TfrmPayReport;
+
+implementation
+
+uses Main;
+
+{$R *.DFM}
+
+procedure TfrmPayReport.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Release;
+end;
+
+procedure TfrmPayReport.qrpReportBeforePrint(Sender: TQuickRep;
+  var PrintReport: Boolean);
+begin
+{  if qryReport.ParamByName('PayKind').AsString<>'HP' then
+  begin
+    lblHolidayDays.Width:=0;
+    lblHolidayPay.Width:=0;
+    lblChristmasBonus.Width:=0;
+    lblAnnualBonus.Width:=0; //added DL041207
+    lblServiceBonus.Width:=0;
+    lblSpecialBonus.Width:=0;
+    qrdHolidayDays.Width:=0;
+    qrdHolidayPay.Width:=0;
+    qrdChristmasBonus.Width:=0;
+    qrdAnnualBonus.Width:=0; //added DL041207
+    qrdServiceBonus.Width:=0;
+    qrdSpecialBonus.Width:=0;
+  end;}
+end;
+
+end.
